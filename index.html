@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music CDs</title>
+
+    <!-- Hope its OK to use Tailwind, since it's an assignment focusing on Javascript -->
+    <link rel="stylesheet" href="assets/css/output.css" />
+    <script src="assets/js/index.js" defer></script>
+  </head>
+  <body>
+    <main
+      class="max-w-screen-md mx-auto py-6 min-h-screen bg-stone-50 flex flex-col gap-6"
+    >
+      <section class="px-6 flex flex-col gap-3">
+        <header>
+          <h1 class="bg-blue-900 text-white py-3 px-4 text-4xl">Music CDs</h1>
+        </header>
+
+        <form id="new-cd" class="flex flex-col gap-3" aria-label="Add a new CD">
+          <div>
+            <label for="author">Author</label>
+            <input id="author" type="text" name="author" required />
+          </div>
+
+          <div>
+            <label for="title">Title</label>
+            <input id="title" type="text" name="title" required />
+          </div>
+
+          <div>
+            <label for="year">Year</label>
+            <input id="year" type="number" name="year" required />
+          </div>
+
+          <button type="submit" class="py-2 bg-stone-300 text-xl font-medium">
+            Add
+          </button>
+        </form>
+      </section>
+
+      <section class="px-6">
+        <div class="border border-blue-900 p-0.5">
+          <table class="w-full">
+            <thead class="text-left">
+              <tr>
+                <th>Author</th>
+                <th>Title</th>
+                <th>Year</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Britney Spears</td>
+                <td>Circus</td>
+                <td>2008</td>
+                <td>
+                  <!-- Some CD's just shouldn't be allowed to be deleted. -->
+                  <button
+                    type="button"
+                    aria-label="Delete CD Britney Spears - Circus"
+                    disabled
+                  >
+                    🗑️
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <template id="cd-row">
+      <tr>
+        <td class="author"></td>
+        <td class="title"></td>
+        <td class="year"></td>
+        <td class="delete">
+          <button type="button">🗑️</button>
+        </td>
+      </tr>
+    </template>
+  </body>
+</html>

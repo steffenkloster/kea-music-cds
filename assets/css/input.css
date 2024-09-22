@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+table {
+  tbody {
+    td {
+      @apply py-1;
+    }
+
+    tr:nth-child(even) {
+      @apply bg-white;
+    }
+  }
+
+  thead {
+    th {
+      @apply bg-blue-900 text-white border-r-2 border-white px-3;
+
+      &:nth-child(3) {
+        @apply text-right;
+      }
+    }
+  }
+
+  td {
+    &:nth-child(3) {
+      @apply text-right;
+    }
+
+    &:last-child {
+      @apply text-center;
+    }
+  }
+}
+
+form#new-cd {
+  & > div {
+    @apply flex justify-between items-center;
+  }
+
+  input {
+    @apply border border-stone-300 rounded-md px-2 py-1;
+
+    &[type="text"] {
+      @apply w-full;
+    }
+  }
+
+  label {
+    @apply min-w-24;
+  }
+}
+
+button {
+  @apply filter hover:brightness-105 transition-all duration-300;
+
+  &:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+}
