@@ -37,7 +37,10 @@ newCDForm.addEventListener("submit", (e) => {
     yearInt >= 0 ? yearInt : `${Math.abs(yearInt)} BC`;
 
   const newCdBtn = newCd.querySelector(".delete button");
-  newCdBtn.setAttribute("aria-label", `Delete CD ${author} - ${title}`);
+  newCdBtn.setAttribute(
+    "aria-label",
+    `Delete CD ${author.value} - ${title.value}`
+  );
   newCdBtn.addEventListener("click", (e) => {
     const tableRow = e.target.closest("tr");
     tableRow.remove();
