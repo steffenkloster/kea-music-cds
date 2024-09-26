@@ -5,20 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music CDs</title>
 
-    <!-- Hope its OK to use Tailwind, since it's an assignment focusing on Javascript -->
-    <link rel="stylesheet" href="assets/css/output.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/index.js" defer></script>
   </head>
   <body>
-    <main
-      class="max-w-screen-md mx-auto py-6 min-h-screen bg-stone-50 flex flex-col gap-6"
-    >
-      <section class="px-6 flex flex-col gap-3">
+    <main>
+      <section>
         <header>
-          <h1 class="bg-blue-900 text-white py-3 px-4 text-4xl">Music CDs</h1>
+          <h1>Music CDs</h1>
         </header>
 
-        <form id="new-cd" class="flex flex-col gap-3" aria-label="Add a new CD">
+        <form id="new-cd" aria-label="Add a new CD">
           <div>
             <label for="author">Author</label>
             <input id="author" type="text" name="author" required />
@@ -34,16 +32,14 @@
             <input id="year" type="number" name="year" required />
           </div>
 
-          <button type="submit" class="py-2 bg-stone-300 text-xl font-medium">
-            Add
-          </button>
+          <button type="submit">Add</button>
         </form>
       </section>
 
-      <section class="px-6">
-        <div class="border border-blue-900 p-0.5">
-          <table class="w-full">
-            <thead class="text-left">
+      <section>
+        <div>
+          <table>
+            <thead>
               <tr>
                 <th>Author</th>
                 <th>Title</th>
